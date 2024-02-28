@@ -1,16 +1,20 @@
 class GildedRose
+  attr_reader :name, :item
 
+  def initialize(name, quality, days_remaining)
+    @item = klass_for(name).new(quality, days_remaining)
+  end
 
-  def tick
+  def klass_for(name)
     case name
     when 'Normal Item'
-      return normal_tick
+      Normal
     when 'Aged Brie'
-      return brie_tick
+      Brie
     when 'Sulfuras, Hand of Ragnaros'
-      return sulfuras_tick
+      Sulfuras
     when 'Backstage passes to a TAFKAL80ETC concert'
-      return backstage_tick
+      Backstage
     end
   end
 
