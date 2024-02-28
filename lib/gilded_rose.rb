@@ -9,8 +9,7 @@ class GildedRose
 
   def tick
    if name == 'Normal Item'
-       return
-   end
+     return
    end
     if @name != "Aged Brie" and @name != "Backstage passes to a TAFKAL80ETC concert"
       if @quality > 0
